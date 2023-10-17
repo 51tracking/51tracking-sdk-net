@@ -83,7 +83,8 @@ public class Test
 
 ## Testing
 
-In the root directory of the test project, run the following command to execute the test
+在测试项目的根目录下，运行以下命令执行测试
+
 ```
 dotnet test
 ```
@@ -129,7 +130,7 @@ catch (Tracking51Exception ex)
 ## Examples
 
 ## Couriers
-##### Return a list of all supported couriers.
+##### 返回所有支持的快递公司列表
 https://api.51Tracking.com/v4/couriers/all
 ```c#
 var apiResponse = tracking51.Courier.GetAllCouriers();
@@ -143,7 +144,7 @@ foreach (var item in apiResponse.data)
 ```
 
 ## Trackings
-##### Create a tracking.
+##### 单个物流单号实时添加且查询
 https://api.51Tracking.com/v4/trackings/create
 ```c#
 CreateTrackingParams createTrackingParams = new CreateTrackingParams();
@@ -156,7 +157,7 @@ Console.WriteLine(apiResponse.data.courierCode);
 
 ```
 
-##### Get tracking results of multiple trackings.
+##### 获取多个物流单号的查询结果
 https://api.51Tracking.com/v4/trackings/get
 ```c#
 GetTrackingResultsParams getTrackingResultsParams = new GetTrackingResultsParams();
@@ -185,7 +186,7 @@ foreach (var item in apiResponse.data.rejected)
 }
 ```
 
-##### Create multiple trackings (Max. 40 tracking numbers create in one call).
+##### 添加多个物流单号（一次调用最多创建 40 个物流单号）
 https://api.51Tracking.com/v4/trackings/batch
 ```c#
 List<CreateTrackingParams> trackingParamsList = new List<CreateTrackingParams>();
@@ -224,7 +225,7 @@ foreach (var item in apiResponse.data.error)
 }
 ```
 
-##### Update a tracking by ID.
+##### 根据ID更新物流信息
 https://api.51Tracking.com/v4/trackings/update/{id}
 ```c#
 UpdateTrackingParams updateTrackingParams = new UpdateTrackingParams();
@@ -241,7 +242,7 @@ if(apiResponse.data != null){
 }
 ```
 
-##### Delete a tracking by ID.
+##### 通过ID删除单号
 https://api.51Tracking.com/v4/trackings/delete/{id}
 ```c#
 string idString = "9a5575a8b14833ff3a34d357709707b7";
@@ -253,7 +254,7 @@ if(apiResponse.data != null){
 }
 ```
 
-##### Retrack expired tracking by ID.
+##### 通过ID重新查询过期的单号
 https://api.51Tracking.com/v4/trackings/retrack/{id}
 ```c#
 string idString = "9a5575a8b14833ff3a34d357709707b7";
@@ -265,7 +266,7 @@ if(apiResponse.data != null){
 }
 ```
 ## Air Waybill
-##### Create an air waybill.
+##### 查询航空运单的结果
 https://api.51Tracking.com/v4/awb
 ```c#
 AirWaybillParams airWaybillParams = new AirWaybillParams();
