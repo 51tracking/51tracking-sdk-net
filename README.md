@@ -45,6 +45,9 @@ $ nuget install 51tracking
 
 ```c#
 using Tracking51API;
+using Tracking51API.Model.AirWaybills;
+using Tracking51API.Model.Couriers;
+using Tracking51API.Model.Trackings;
 
 namespace Testing;
 
