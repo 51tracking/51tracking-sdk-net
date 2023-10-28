@@ -249,7 +249,7 @@ if(apiResponse.data != null){
 https://api.51Tracking.com/v4/trackings/delete/{id}
 ```c#
 string idString = "9a5575a8b14833ff3a34d357709707b7";
-var apiResponse = tracking51.Tracking.RetrackTrackingByID(idString);
+var apiResponse = tracking51.Tracking.DeleteTrackingByID(idString);
 Console.WriteLine(apiResponse.meta.code);
 if(apiResponse.data != null){
     Console.WriteLine(apiResponse.data.trackingNumber);
