@@ -8,5 +8,5 @@ public class Enums
    public const string ErrMissingAwbNumber = "Awb number cannot be empty";
    public const string ErrMaxTrackingNumbersExceeded = "Max. 40 tracking numbers create in one call";
    public const string ErrEmptyId = "Id cannot be empty";
-   public const string ErrInvalidAirWaybillFormat = "The air waybill number format is invalid and can only be 12 digits in length";
+   public const string ErrInvalidAirWaybillFormat = "The air waybill number format is invalid";
 }

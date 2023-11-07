@@ -22,30 +22,4 @@ public class CourierTest
         Assert.NotNull(response);
     }
 
-    [Fact]
-    public void TestDetectMethodWithValidTrackingNumber()
-    {
-        var detectParams = new DetectParams
-        {
-            trackingNumber = "9261290306531704519171" 
-        };
-
-        var response = tracking51.Courier.detect(detectParams);
-        
-        Assert.NotNull(response);
-    }
-
-    [Fact]
-    public void TestDetectMethodWithMissingTrackingNumber()
-    {
-        var detectParams = new DetectParams
-        {
-            trackingNumber = null
-        };
-
-        var exception = Assert.Throws<Tracking51Exception>(() => tracking51.Courier.detect(detectParams));
-
-        Assert.Equal(Enums.ErrMissingTrackingNumber, exception.Message); 
-    }
-
 }

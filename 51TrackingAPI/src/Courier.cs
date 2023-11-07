@@ -19,17 +19,4 @@ public class Courier : Base
       
     }
 
-    public ApiResponse<List<Couriers>> detect(DetectParams detectParams){
-        if (string.IsNullOrEmpty(detectParams.trackingNumber))
-        {
-            throw new Tracking51Exception(Enums.ErrMissingTrackingNumber);
-        }
-        HttpMethod method = HttpMethod.Post;
-        var responseData = request.MakeRequest(_apiModule + "/detect", method, detectParams);
-
-        ApiResponse<List<Couriers>> response = JsonConvert.DeserializeObject<ApiResponse<List<Couriers>>>(responseData);
-        return response;
-        
-    }
-
 }

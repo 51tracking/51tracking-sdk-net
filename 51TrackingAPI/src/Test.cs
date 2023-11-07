@@ -24,18 +24,6 @@ public class Test
                 Console.WriteLine("courierCode: " + item.courierCode);
                 Console.WriteLine();
             }
-            
-            // DetectParams detectParams = new DetectParams();
-            // detectParams.trackingNumber = "9261290306531704519171";
-            // var apiResponse = tracking51.Courier.detect(detectParams);
-            // Console.WriteLine(apiResponse.meta.code);
-            // foreach (var item in apiResponse.data)
-            // {
-            //     Console.WriteLine("courierName: " + item.courierName);
-            //     Console.WriteLine("courierCode: " + item.courierCode);
-                
-            //     Console.WriteLine();
-            // }
 
             // AirWaybillParams airWaybillParams = new AirWaybillParams();
             // airWaybillParams.awbNumber = "235-69030430";
@@ -151,6 +139,10 @@ public class Test
         catch (Tracking51Exception ex)
         {
             Console.WriteLine("Catch custom exceptions：" + ex.Message);
+        }
+        catch (TimeoutException ex)
+        {
+            Console.WriteLine("Timeout Exception: "  + ex.Message);
         }
         catch (Exception ex)
         {

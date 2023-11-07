@@ -37,7 +37,7 @@ $ nuget install 51tracking
 
 ```text
 <ItemGroup>
-    <PackageReference Include="51Tracking" Version="X.Y.Z" />
+    <PackageReference Include="51Tracking" Version="0.1.1" />
 </ItemGroup>
 ```
 
@@ -73,6 +73,10 @@ public class Test
         catch (Tracking51Exception ex)
         {
             Console.WriteLine("Catch custom exceptions：" + ex.Message);
+        }
+        catch (TimeoutException ex)
+        {
+            Console.WriteLine("Timeout Exception: "  + ex.Message);
         }
         catch (Exception ex)
         {
