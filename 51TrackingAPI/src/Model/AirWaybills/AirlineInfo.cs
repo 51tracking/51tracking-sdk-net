@@ -13,7 +13,7 @@ public class AirlineInfo
     [JsonProperty("track_url")]
     public string trackUrl { get; set; }
 
-    [JsonProperty("trackpage_url2")]
-    public string trackpageUrl2 { get; set; }
+    [JsonProperty("trackpage_url")]
+    public string trackpageUrl { get; set; }
 
 }

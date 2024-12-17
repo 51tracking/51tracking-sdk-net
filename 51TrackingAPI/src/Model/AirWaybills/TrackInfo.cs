@@ -27,4 +27,10 @@ public class TrackInfo
 
     [JsonProperty("weight")]
     public string weight { get; set; }
+
+    [JsonProperty("checkpoint_status")]
+    public string checkpointStatus { get; set; }
+
+    [JsonProperty("checkpoint_substatus")]
+    public string checkpointSubstatus { get; set; }
 }

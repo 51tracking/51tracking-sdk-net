@@ -7,6 +7,12 @@ public class AirWaybills
     [JsonProperty("awb_number")]
     public string awbNumber { get; set; }
 
+    [JsonProperty("awb_status")]
+    public string awbStatus { get; set; }
+
+    [JsonProperty("awb_substatus")]
+    public string awbSubstatus { get; set; }
+
     [JsonProperty("status_number")]
     public string statusNumber { get; set; }
 

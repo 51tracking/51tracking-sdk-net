@@ -28,6 +28,9 @@ public class CreateTrackingParams
     [JsonProperty("customer_sms")]
     public string customerSms { get; set; }
 
+    [JsonProperty("recipient_postcode")]
+    public string recipientPostcode { get; set; }
+
     [JsonProperty("title")]
     public string title { get; set; }
 

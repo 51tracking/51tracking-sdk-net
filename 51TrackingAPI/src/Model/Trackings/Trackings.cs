@@ -82,6 +82,9 @@ public class Trackings
     [JsonProperty("order_id")]
     public string orderId { get; set; }
 
+    [JsonProperty("recipient_postcode")]
+    public string recipientPostcode { get; set; }
+
     [JsonProperty("title")]
     public string title { get; set; }
 
